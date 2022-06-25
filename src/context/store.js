@@ -7,18 +7,21 @@ import photoReducer from "./photoSlice";
 
 // configuring the Persitant storage for storing user login status in local stoarge
 const persistConfig = {
-    key: 'persist-userLogIn',
-    storage
+    key: 'Persist-userLogin',
+    storage,
 }
 
 const PersistedReducer = persistReducer(persistConfig, authSlice.reducer)
 const store = configureStore({
     reducer: {
         auth: PersistedReducer,
-       // auth: authSlice.reducer,
         users: userReducer,
         photos: photoReducer
     },
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 })
 
 export const persistor = persistStore(store);

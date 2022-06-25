@@ -21,6 +21,6 @@ export const PhotosList = (props) => {
 }
 
 PhotosList.propTypes = {
-  title: PropTypes.string.isRequired,
-  thumbnailUrl: PropTypes.string.isRequired
+  title: PropTypes.string,
+  thumbnailUrl: PropTypes.string
 }
