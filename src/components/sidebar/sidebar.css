@@ -6,7 +6,15 @@
     top: 0;
     background-color: white;
     box-shadow: 0 0 3px 0 #000000;
+    z-index: 1;
+    overflow: hidden;
 }
+
+/* @media screen and (max-width: 768px) {
+    .sidebar__fixed{
+        width: 0;
+    }
+} */
 
 .sidebar__header{
     padding: 20px 15px;
