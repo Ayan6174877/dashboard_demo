@@ -1,0 +1,52 @@
+.sidebar__fixed{
+    position: fixed;
+    height: 100vh;
+    width: 230px;
+    left: 0;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 0 3px 0 #000000;
+}
+
+.sidebar__header{
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+}
+.sidebar__user_list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__user_list li{
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 2s linear ease-in;
+}
+
+/* .sidebar__user_list li:not(:last-child){
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+} */
+
+.sidebar__user_list li:hover
+{
+    background-color: darkcyan;
+    color: white;
+}
+
+
+.sidebar__user_list li.active
+{
+    background-color: darkcyan;
+    color: white;
+    pointer-events: none;
+}
+
+.self__flex__end{
+   position: absolute;
+   bottom: 15px;
+   left: 0;
+   width: 100%;
+}
